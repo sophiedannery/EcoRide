@@ -11971,4 +11971,33 @@ textarea.form-control-lg {
   text-decoration: underline;
   text-decoration-color: #1A5E29;
   font-weight: bold;
+}
+
+.bgimage {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(/media/images/image\ \(3\).jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cardtest1 {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(/media/images/image\ \(16\).jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.cardtest2 {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(/media/images/image\ \(12\).jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.cardtest3 {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(/media/images/image\ \(8\).jpg);
+  background-position: center;
+  background-size: cover;
 }/*# sourceMappingURL=main.css.map */

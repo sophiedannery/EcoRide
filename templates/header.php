@@ -1,10 +1,6 @@
 <?php
 
-$mainMenu = [
-    'index.php' => 'Accueil',
-    'covoiturages.php' => 'Covoiturages',
-    'contact.php' => 'Contact'
-];
+require_once 'lib/config.php';
 
 
 $currentPage = basename($_SERVER['SCRIPT_NAME']);
