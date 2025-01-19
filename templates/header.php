@@ -41,8 +41,7 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
 
             <div class="col-md-3 text-end">
                 <?php if (isset($_SESSION['utilisateur'])): ?>
-                    <?= $_SESSION['utilisateur']['pseudo']; ?>
-                    <a class="btn btn-outline-primary me-2" href="#">Mon compte</a>
+                    <a class="btn btn-outline-primary me-2" href="pageutilisateur.php">Mon compte</a>
                     <a class="btn btn-primary" href="deconnexion.php">Déconnexion</a>
                 <?php else: ?>
                     <button type="button" class="btn btn-outline-primary me-2"><a href="/connexion.php">Connexion</a></button>

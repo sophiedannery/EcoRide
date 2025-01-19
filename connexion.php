@@ -14,7 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         session_regenerate_id(true);
         $_SESSION["utilisateur"] = [
             "id" => $utilisateur["id"],
-            "pseudo" => $utilisateur["pseudo"]
+            "pseudo" => $utilisateur["pseudo"],
+            "credits" => $utilisateur["credits"]
         ];
         header("Location: index.php");
     } else {

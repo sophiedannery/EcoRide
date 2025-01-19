@@ -64,7 +64,7 @@ require_once 'templates/header.php';
                 <br>Notre mission : réduire l'impact environnemental des déplacements tout en offrant une alternative conviviale et économique à la mobilité individuelle.
             </p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Je découvre</button>
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"><a href="/inscription.php">Je découvre</a></button>
             </div>
         </div>
     </div>

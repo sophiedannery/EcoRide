@@ -2,13 +2,14 @@
 
 function addUser(PDO $pdo, string $pseudo, string $email, string $mot_de_passe): bool
 {
-    $query = $pdo->prepare("INSERT INTO utilisateurs (pseudo, email, mot_de_passe) VALUES (:pseudo, :email, :mot_de_passe)");
+    $query = $pdo->prepare("INSERT INTO utilisateurs (pseudo, email, mot_de_passe, credits) VALUES (:pseudo, :email, :mot_de_passe, :credits)");
 
     $mot_de_passe = password_hash($mot_de_passe, PASSWORD_DEFAULT);
 
     $query->bindValue(':pseudo', $pseudo);
     $query->bindValue(':email', $email);
     $query->bindValue(':mot_de_passe', $mot_de_passe);
+    $query->bindValue(':credits', 20);
 
     return $query->execute();
 }
@@ -71,7 +72,7 @@ function verifyUSer(PDO $pdo, $utilisateur): array | bool
 
 function verifyUserLoginPassword(PDO $pdo, string $email, string $mot_de_passe): bool | array
 {
-    $query = $pdo->prepare("SELECT id, pseudo, email, mot_de_passe FROM utilisateurs WHERE email = :email");
+    $query = $pdo->prepare("SELECT id, pseudo, email, mot_de_passe, credits FROM utilisateurs WHERE email = :email");
     $query->bindValue(":email", $email);
     $query->execute();
     $utilisateur = $query->fetch(PDO::FETCH_ASSOC);
