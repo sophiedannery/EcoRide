@@ -67,7 +67,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </div>
 
         <!-- bouton -->
-        <button type="submit" class="btn btn-primary w-100" name="add_user">S'inscrire</button>
+        <input type="submit" value="S'inscrire" class="btn btn-primary w-100" name="add_user">
+
+        <div class="text-center my-3">
+            <a href="/login.php">Déjà inscrit ? <strong>Connecte-toi !</strong></a>
+        </div>
     </form>
 </div>
 

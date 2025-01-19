@@ -68,3 +68,17 @@ function verifyUSer(PDO $pdo, $utilisateur): array | bool
         return true;
     }
 }
+
+function verifyUserLoginPassword(PDO $pdo, string $email, string $mot_de_passe): bool | array
+{
+    $query = $pdo->prepare("SELECT id, pseudo, email, mot_de_passe FROM utilisateurs WHERE email = :email");
+    $query->bindValue(":email", $email);
+    $query->execute();
+    $utilisateur = $query->fetch(PDO::FETCH_ASSOC);
+
+    if ($utilisateur && password_verify($mot_de_passe, $utilisateur["mot_de_passe"])) {
+        return $utilisateur;
+    } else {
+        return false;
+    }
+}

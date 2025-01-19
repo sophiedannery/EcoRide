@@ -39,7 +39,7 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
             </ul>
 
             <div class="col-md-3 text-end">
-                <button type="button" class="btn btn-outline-primary me-2">Se connecter</button>
+                <button type="button" class="btn btn-outline-primary me-2"><a href="/connexion.php">Se connecter</a></button>
                 <button type="button" class="btn btn-primary"><a href="inscription.php">S'inscrire</a></button>
             </div>
         </header>
