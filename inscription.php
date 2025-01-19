@@ -5,20 +5,17 @@ require_once 'lib/utilisateur.php';
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $verif = verifyUSer($pdo, $_POST);
-
     if ($verif === true) {
         $resAdd = addUSer($pdo, $_POST["pseudo"], $_POST["email"], $_POST["mot_de_passe"]);
-
         $utilisateur = verifyUserLoginPassword($pdo, $_POST["email"], $_POST["mot_de_passe"]);
-
         if ($utilisateur) {
             session_regenerate_id(true);
-
             $_SESSION["utilisateur"] = [
                 "id" => $utilisateur["id"],
                 "pseudo" => $utilisateur["pseudo"],
                 "credits" => $utilisateur["credits"],
             ];
+            $_SESSION["new_user"] = true;
             header("Location: pageutilisateur.php");
             exit;
         }

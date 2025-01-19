@@ -18,6 +18,8 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
 
     <!-- appel de SASS -->
     <link rel="stylesheet" href="scss/main.css">
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 
 <body>

@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             "pseudo" => $utilisateur["pseudo"],
             "credits" => $utilisateur["credits"]
         ];
-        header("Location: index.php");
+        header("Location: pageutilisateur.php");
     } else {
         $error = "Email ou mot de passe invalide.";
     }
