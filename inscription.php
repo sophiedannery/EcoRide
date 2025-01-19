@@ -8,7 +8,20 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     if ($verif === true) {
         $resAdd = addUSer($pdo, $_POST["pseudo"], $_POST["email"], $_POST["mot_de_passe"]);
-        header("Location: index.php");
+
+        $utilisateur = verifyUserLoginPassword($pdo, $_POST["email"], $_POST["mot_de_passe"]);
+
+        if ($utilisateur) {
+            session_regenerate_id(true);
+
+            $_SESSION["utilisateur"] = [
+                "id" => $utilisateur["id"],
+                "pseudo" => $utilisateur["pseudo"],
+                "credits" => $utilisateur["credits"],
+            ];
+            header("Location: pageutilisateur.php");
+            exit;
+        }
     } else {
         $errors = $verif;
     }

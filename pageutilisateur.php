@@ -1,5 +1,12 @@
 <?php
 require_once 'templates/header.php';
+
+//Pour vérifier qu'un utilisateur est connecté avant d'afficher ses infos
+if (!isset($_SESSION["utilisateur"])) {
+    header("Location: connexion.php");
+    exit;
+}
+
 ?>
 
 
