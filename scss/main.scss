@@ -1,2 +1,9 @@
 @import url("/node_modules/bootstrap-icons/font/bootstrap-icons.css");
 @import 'custom';
+
+.nav-link.active {
+    color: #1A5E29;           
+    text-decoration: underline; 
+    text-decoration-color: #1A5E29; 
+    font-weight: bold; 
+}
