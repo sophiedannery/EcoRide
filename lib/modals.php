@@ -8,7 +8,7 @@
             <div class="modal-body text-center">
                 <img src="/media/images/Vecteur3.png" alt="Cadeau crédit offert" width="400">
                 <p class="mb-0">
-                    Félicitations ! Votre inscription a bien été prise en compte. Vous avez reçu <strong>20 crédits offerts</strong> pour commencer à utiliser EcoRide.
+                    Félicitations ! Votre inscription a bien été prise en compte. Vous avez reçu <strong>20 crédits offerts</strong> pour vos premiers trajets.
                 </p>
             </div>
             <div class="modal-footer text-center">
