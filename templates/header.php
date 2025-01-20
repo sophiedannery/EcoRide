@@ -20,6 +20,8 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
     <link rel="stylesheet" href="scss/main.css">
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <link rel="icon" type="image/x-icon" href="/media/favicon/favicon_32X32.png">
 </head>
 
 <body>
