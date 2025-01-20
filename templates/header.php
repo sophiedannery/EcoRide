@@ -23,8 +23,9 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
 </head>
 
 <body>
+
     <div class="container">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-1 border-bottom">
             <div class="col-md-3 mb-2 mb-md-0">
                 <a href="/index.php" class="d-inline-flex link-body-emphasis text-decoration-none">
                     <img src="/media/logos/EcoRide_Logo2.png" alt="Logo EcoRide" width="120">
@@ -50,7 +51,25 @@ $currentPage = basename($_SERVER['SCRIPT_NAME']);
                     <button type="button" class="btn btn-primary"><a href="inscription.php">Inscription</a></button>
                 <?php endif; ?>
             </div>
+
         </header>
+
+        <!-- // test ajout deuxième footer -->
+
+        <?php if (isset($_SESSION['utilisateur'])): ?>
+
+            <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between mb-4">
+                <div class="col-md-3 ms-auto text-end">
+                    <button type="button" class="btn btn-primary"><a href="#"><?= $_SESSION["utilisateur"]["credits"]; ?> CREDITS</a></button>
+                    <img src="<?= isset($_SESSION['utilisateur']['photo']) ? $_SESSION['utilisateur']['photo'] : '/media/profil_defaut/photo_profil_defaut.jpg'; ?>" alt="mdo" width="32" height="32" class="rounded-circle" style="object-fit: cover;">
+                </div>
+            </header>
+
+        <?php endif; ?>
+
+
+
+
     </div>
 
     <main>

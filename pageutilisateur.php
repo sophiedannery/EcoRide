@@ -25,7 +25,7 @@ unset($_SESSION["new_user"]);
 <div class="container">
 
     <h1>Hello <?= $_SESSION['utilisateur']['pseudo']; ?></h1>
-    <p>Crédits : <?= $_SESSION["utilisateur"]["credits"]; ?></p>
+    <p>Crédits : <?= $_SESSION["utilisateur"]["credits"]; ?> </p>
 
 
     <!-- Photo de profil -->
